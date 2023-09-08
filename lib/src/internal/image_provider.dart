@@ -108,7 +108,7 @@ class FMTCImageProvider extends ImageProvider<FMTCImageProvider> {
         return decode(await ImmutableBuffer.fromUint8List(bytes));
       }
 
-      throw FallThroughError();
+      throw UnsupportedError('Unsupported');
     }
 
     final String url = provider.getTileUrl(coords, options);
